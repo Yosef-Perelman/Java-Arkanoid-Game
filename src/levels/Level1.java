@@ -56,14 +56,25 @@ public class Level1 implements LevelInformation {
     @Override
     public List<Block> blocks() {
         List<Block> blocks = new ArrayList<>();
-        Rectangle rect = new Rectangle(new Point(385, 150), 30, 30);
-        Block block = new Block(rect, Color.red);
-        blocks.add(block);
+//        Rectangle rect = new Rectangle(new Point(385, 150), 30, 30);
+//        Block block = new Block(rect, Color.red);
+//        blocks.add(block);
+
+        // new staff
+        int Xstart = 265, Ystart = 90;
+        for (int i = 0 ; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                Rectangle rect = new Rectangle(new Point(Xstart + 30 * i, Ystart + 30 * j), 30, 30);
+                Block block = new Block(rect, Color.red);
+                blocks.add(block);
+            }
+        }
+
         return blocks;
     }
 
     @Override
     public int numberOfBlocksToRemove() {
-        return 1;
+        return 81;
     }
 }
