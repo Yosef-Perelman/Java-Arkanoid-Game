@@ -1,5 +1,3 @@
-// ID: 206344814
-
 package gameactions;
 
 import biuoop.DrawSurface;

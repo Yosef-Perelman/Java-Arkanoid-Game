@@ -1,5 +1,3 @@
-// ID: 206344814
-
 package data;
 
 import biuoop.DrawSurface;
