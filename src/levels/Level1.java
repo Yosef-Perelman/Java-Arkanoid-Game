@@ -61,9 +61,9 @@ public class Level1 implements LevelInformation {
 //        blocks.add(block);
 
         // new staff
-        int Xstart = 265, Ystart = 90;
-        for (int i = 0 ; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+        int Xstart = 355, Ystart = 120;
+        for (int i = 0 ; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 Rectangle rect = new Rectangle(new Point(Xstart + 30 * i, Ystart + 30 * j), 30, 30);
                 Block block = new Block(rect, Color.red);
                 blocks.add(block);
@@ -75,6 +75,6 @@ public class Level1 implements LevelInformation {
 
     @Override
     public int numberOfBlocksToRemove() {
-        return 81;
+        return 9;
     }
 }
