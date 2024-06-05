@@ -2,6 +2,7 @@ package interfaces;
 
 import primitives.Velocity;
 import sprites.Block;
+import biuoop.DrawSurface;
 
 import java.util.List;
 
@@ -51,4 +52,9 @@ public interface LevelInformation {
      * @return Number of blocks that should be removed
      */
     int numberOfBlocksToRemove();
+
+    /**
+    *
+    */
+    public void drawBackground(DrawSurface d);
 }

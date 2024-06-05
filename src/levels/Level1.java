@@ -1,5 +1,6 @@
 package levels;
 
+import biuoop.DrawSurface;
 import interfaces.LevelInformation;
 import interfaces.Sprite;
 import primitives.Point;
@@ -56,25 +57,32 @@ public class Level1 implements LevelInformation {
     @Override
     public List<Block> blocks() {
         List<Block> blocks = new ArrayList<>();
-//        Rectangle rect = new Rectangle(new Point(385, 150), 30, 30);
-//        Block block = new Block(rect, Color.red);
-//        blocks.add(block);
-
-        // new staff
-        int Xstart = 355, Ystart = 120;
-        for (int i = 0 ; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                Rectangle rect = new Rectangle(new Point(Xstart + 30 * i, Ystart + 30 * j), 30, 30);
-                Block block = new Block(rect, Color.red);
-                blocks.add(block);
-            }
-        }
-
+        Rectangle rect = new Rectangle(new Point(385, 150), 30, 30);
+        Block block = new Block(rect, Color.red);
+        blocks.add(block);
         return blocks;
     }
 
     @Override
     public int numberOfBlocksToRemove() {
-        return 9;
+        return 1;
     }
+
+    // new staff
+    @Override
+    public void drawBackground(DrawSurface d){
+        //background
+        d.setColor(Color.blue);
+        d.fillRectangle(0, 0, 800, 600);
+        //sun and sun rays
+        d.setColor(Color.YELLOW);
+        d.fillCircle(140, 140, 50);
+        for (int i = 1; i < 6; i++) {
+            d.drawCircle(140, 140, 50 + 2 * i);
+        }
+        for (int i = 0; i < 100; i++) {
+            d.drawLine(140, 140, i * 8, 250);
+        }
+    }
+    //
 }

@@ -196,8 +196,11 @@ public class GameLevel implements Animation {
      */
     public void doOneFrame(DrawSurface d) {
         // Run the game
-        d.setColor(Color.blue);
-        d.fillRectangle(0, 0, SURFACE_WIDTH, SURFACE_HEIGHT);
+
+        // new staff
+        this.level.drawBackground(d);
+        //
+
         this.sprites.drawAllOn(d);
         if (this.keyboard.isPressed("p")) {
             KeyPressStoppableAnimation k = new KeyPressStoppableAnimation(
@@ -221,7 +224,7 @@ public class GameLevel implements Animation {
      * and add them to the game.
      */
     public void initialize() {
-        this.addSprite(level.getBackground());
+        //this.addSprite(level.getBackground());
         Counter blocksCounter = new Counter();
         this.blockRemover = new BlockRemover(this, blocksCounter);
         Counter ballsCounter = new Counter();

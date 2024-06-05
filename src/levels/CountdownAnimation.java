@@ -39,6 +39,22 @@ public class CountdownAnimation implements Animation {
             startTime = System.currentTimeMillis();
             flag = false;
         }
+
+        // new staff
+        //background
+        d.setColor(Color.blue);
+        d.fillRectangle(0, 0, 800, 600);
+        //sun and sun rays
+        d.setColor(Color.YELLOW);
+        d.fillCircle(140, 140, 50);
+        for (int i = 1; i < 6; i++) {
+            d.drawCircle(140, 140, 50 + 2 * i);
+        }
+        for (int i = 0; i < 100; i++) {
+            d.drawLine(140, 140, i * 8, 250);
+        }
+        //
+
         sprites.drawAllOn(d);
         int i = (int) ((((System.currentTimeMillis() - startTime) / 1000) * (numOfSeconds / countFrom)));
         if (countFrom - i == 0) {
