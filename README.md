@@ -6,4 +6,4 @@ Then open the cmd in this folder.
 Then run the command "ant compile" and then run the command "ant run".
 
 ![Screenshot 2024-06-07 114514](https://github.com/Yosef-Perelman/Java-Arkanoid-Game/assets/72888832/0f09898d-02ad-4176-b214-f771ead1f227)
-<img src="[Assets/icon.png](https://github.com/Yosef-Perelman/Java-Arkanoid-Game/assets/72888832/0f09898d-02ad-4176-b214-f771ead1f227)" width="200">
+<img src="https://github.com/Yosef-Perelman/Java-Arkanoid-Game/assets/72888832/0f09898d-02ad-4176-b214-f771ead1f227" width="200">
